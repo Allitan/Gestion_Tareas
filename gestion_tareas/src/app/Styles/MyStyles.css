@@ -1,0 +1,102 @@
+
+.contenedor{
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    width: 130%;
+}
+
+.formularioTareas{
+    display: flex;
+    justify-content: left;
+    text-align: center;
+    font-size: 24px;
+    color: #0aa8f1;
+}
+
+.inputTitulo{
+    border: 3px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 10px;
+
+}
+
+.inputDescripcion{
+    border: 3px solid #ccc;
+    border-radius: 5px;
+    padding: 5px; 
+    margin-left: 10px; 
+    
+}
+
+.inputEstado{
+    border: 3px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    margin-left: 10px;
+}
+
+.estadoPendiente {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.estadoProgreso {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.estadoCompleta {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.agregarTarea {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.tituloListaTareas{
+    display: flex;
+    justify-content: left;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 24px;
+    color: #0aa8f1;
+}
+
+.contenedorTabla {
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.tablaTareas{
+    border-collapse: collapse;
+    margin-top: 20px;
+    border: #0aa8f1 2px solid;
+    width: 80%;
+}
+
+.idTareas, .tituloTareas, .descripcionTareas, .estadoTareas {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.filaTarea {
+    border-bottom: 1px solid #ddd;
+}
+
+.id, .titulo, .descripcion, .estado {
+    padding: 40px;
+    text-align: center;
+}

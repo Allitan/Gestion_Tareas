@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { useContextTarea } from "../Provider/TareaProvider";
 import { Tarea } from "../Modelos/Tareas";
+import '../Styles/MyStyles.css';
 
 export default function FormularioTarea() {
     const [ tituloTarea, setTituloTarea ] = useState("")
@@ -31,21 +32,21 @@ export default function FormularioTarea() {
     }, [tarea]);
 
     return (
-        <div>
-            <h2>Formulario de Tareas</h2>
+        <div className="contenedor">
+            <h2 className="formularioTareas">Formulario de Tareas</h2>
             <form onSubmit={agregarTareaFormulario}>
 
-                <input type="text" placeholder="Título de la tarea" value={tituloTarea} onChange={(e) => setTituloTarea(e.target.value)} />
+                <input type="text" placeholder="Título de la tarea" value={tituloTarea} onChange={(e) => setTituloTarea(e.target.value)} className='inputTitulo' />
 
-                <input type="text" placeholder="Descripción de la tarea" value={descripcionTarea} onChange={(e) => setDescripcionTarea(e.target.value)} />
+                <input type="text" placeholder="Descripción de la tarea" value={descripcionTarea} onChange={(e) => setDescripcionTarea(e.target.value)} className='inputDescripcion' />
 
-                <select value={estadoTarea} onChange={(e) => setEstadoTarea(e.target.value as "pendiente" | "en progreso" | "completa")}>
-                    <option value="pendiente">Pendiente</option>
-                    <option value="en progreso">En Progreso</option>
-                    <option value="completa">Completa</option>
+                <select value={estadoTarea} onChange={(e) => setEstadoTarea(e.target.value as "pendiente" | "en progreso" | "completa")} className="inputEstado">
+                    <option value="pendiente" className="estadoPendiente">Pendiente</option>
+                    <option value="en progreso" className="estadoProgreso">En Progreso</option>
+                    <option value="completa" className="estadoCompleta">Completa</option>
                 </select>
-
-                <button type="submit">Agregar Tarea</button>
+                <td/>
+                <button type="submit" className="agregarTarea">Agregar Tarea</button>
             </form>
         </div>
     )
